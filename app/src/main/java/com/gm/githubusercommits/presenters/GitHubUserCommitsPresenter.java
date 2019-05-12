@@ -11,6 +11,10 @@ import java.util.List;
  * Created by madhu on 5/12/19.
  */
 
+/*
+Presenter class which will be communicating with the model module to get the data  and updates the view
+ */
+
 public class GitHubUserCommitsPresenter  implements GitHubUserCommitsContract.Presenter {
     private final GitHubUserCommitsContract.View view;
     private final GitHubUserCommitsService gitHubUserCommitsService;
@@ -33,6 +37,7 @@ public class GitHubUserCommitsPresenter  implements GitHubUserCommitsContract.Pr
         gitHubUserCommitsService.getUserCommits(new GitHubUserCommitsService.GitHubUserCommitsCallback() {
             @Override
             public void onSuccess(List<GitHubCommit> commits) {
+                // on success you will recive list of commits.
                 view.processResponse(commits);
             }
 
