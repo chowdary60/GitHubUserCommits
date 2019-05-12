@@ -11,4 +11,9 @@ public class GitHubUserCommitsRepository implements GitHubUserCommitsService {
     public GitHubUserCommitsRepository(GitHubUserCommitsServiceImpl gitHubUserCommitsRepository) {
         this.gitHubUserCommitsRepository = gitHubUserCommitsRepository;
     }
+
+    @Override
+    public void getUserCommits(GitHubUserCommitsCallback gitHubUserCommitsCallback) {
+        gitHubUserCommitsRepository.getUserCommits(gitHubUserCommitsCallback);
+    }
 }
