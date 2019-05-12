@@ -10,7 +10,9 @@ import retrofit2.http.GET;
 /**
  * Created by madhu on 5/12/19.
  */
-
+/*
+retrofit will be used to interact with github API
+ */
 
 public interface GitHubUserCommitsApi {
 

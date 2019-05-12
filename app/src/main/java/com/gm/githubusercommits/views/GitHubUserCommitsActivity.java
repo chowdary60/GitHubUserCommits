@@ -28,7 +28,9 @@ import javax.inject.Inject;
 /**
  * Created by madhu on 5/12/19.
  */
-
+/*
+Activity class which is responsible for the Rendenring UI and interact witht the presenter
+ */
 public class GitHubUserCommitsActivity extends AppCompatActivity implements GitHubUserCommitsContract.View {
 
     @Inject

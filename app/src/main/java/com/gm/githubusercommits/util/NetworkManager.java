@@ -6,7 +6,9 @@ import android.net.ConnectivityManager;
 /**
  * Created by madhu on 5/12/19.
  */
-
+/*
+Chceking the network connectivity of of the application to get connect to the Github API
+ */
 public class NetworkManager {
     private Context context;
     public NetworkManager(Context context) {

@@ -15,6 +15,9 @@ import java.util.List;
 /**
  * Created by madhu on 5/12/19.
  */
+/*
+Adapter which will act as bridge to show the elements data recyclerview item.
+ */
 
 public class GitHubUserCommitsAdapter extends RecyclerView.Adapter<GitHubUserCommitsAdapter.ViewHolder> {
 

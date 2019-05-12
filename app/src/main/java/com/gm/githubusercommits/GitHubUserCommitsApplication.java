@@ -12,7 +12,9 @@ import com.gm.githubusercommits.dagger.modules.GitHubUserCommitsModule;
 /**
  * Created by madhu on 5/12/19.
  */
-
+/*
+Application which will be created before any activity or service is created in the android application
+ */
 public class GitHubUserCommitsApplication extends Application {
     private   GitHubUserCommitsComponent component;
 
@@ -20,6 +22,7 @@ public class GitHubUserCommitsApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        // using dagger for dependency injection
         component = DaggerGitHubUserCommitsComponent.
                 builder().
                 gitHubUserCommitsModule(new GitHubUserCommitsModule(getApplicationContext()))
