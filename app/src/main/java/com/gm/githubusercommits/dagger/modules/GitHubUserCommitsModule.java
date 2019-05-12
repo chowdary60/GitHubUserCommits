@@ -9,6 +9,7 @@ import com.gm.githubusercommits.util.NetworkManager;
 
 import javax.inject.Singleton;
 
+import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -18,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by madhu on 5/12/19.
  */
-
+@Module
 public class GitHubUserCommitsModule {
     private Context context;
 

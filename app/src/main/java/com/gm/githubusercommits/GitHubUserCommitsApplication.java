@@ -2,6 +2,7 @@ package com.gm.githubusercommits;
 
 import android.app.Application;
 
+import com.gm.githubusercommits.dagger.component.DaggerGitHubUserCommitsComponent;
 import com.gm.githubusercommits.dagger.component.GitHubUserCommitsComponent;
 import com.gm.githubusercommits.dagger.modules.GitHubUserCommitsModule;
 
