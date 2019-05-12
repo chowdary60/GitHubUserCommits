@@ -12,6 +12,7 @@ public class NetworkManager {
     public NetworkManager(Context context) {
         this.context = context;
     }
+
     public boolean isInternetConnectionAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         return connectivityManager.getActiveNetworkInfo() != null;
