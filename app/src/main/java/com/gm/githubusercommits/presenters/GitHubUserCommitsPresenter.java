@@ -29,17 +29,15 @@ public class GitHubUserCommitsPresenter  implements GitHubUserCommitsContract.Pr
             view.connectionNotAvailable();
             return;
         }
-        view.showProgressDialog();
+
         gitHubUserCommitsService.getUserCommits(new GitHubUserCommitsService.GitHubUserCommitsCallback() {
             @Override
             public void onSuccess(List<GitHubCommit> commits) {
-                view.hideProgressDialog();
                 view.processResponse(commits);
             }
 
             @Override
             public void onError(Throwable throwable) {
-                view.hideProgressDialog();
                 view.processError(throwable);
             }
         });
