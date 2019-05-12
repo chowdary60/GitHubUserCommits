@@ -41,5 +41,5 @@
         android:id="@+id/progress_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="loading_tv,progress_bar"/>
+        app:constraint_referenced_ids="loading_tv_progress_bar"/>
 </android.support.constraint.ConstraintLayout>

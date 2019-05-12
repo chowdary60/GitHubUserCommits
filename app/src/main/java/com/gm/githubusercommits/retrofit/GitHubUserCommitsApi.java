@@ -12,6 +12,6 @@ import retrofit2.http.GET;
  */
 
 public interface GitHubUserCommitsApi {
-    @GET("repos/chowdary60/Weather/commits")
+    @GET("repos/chowdary60/GitHubUserCommits/commits")
     Call<List<GitHubCommit>> getUserCommits();
 }

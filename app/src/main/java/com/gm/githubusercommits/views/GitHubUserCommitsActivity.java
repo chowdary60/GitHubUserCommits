@@ -1,6 +1,6 @@
 package com.gm.githubusercommits.views;
 
-import android.app.Activity;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.Group;

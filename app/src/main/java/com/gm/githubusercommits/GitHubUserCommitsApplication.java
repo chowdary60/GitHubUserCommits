@@ -1,5 +1,8 @@
 package com.gm.githubusercommits;
 
+
+
+
 import android.app.Application;
 
 import com.gm.githubusercommits.dagger.component.DaggerGitHubUserCommitsComponent;
@@ -11,7 +14,8 @@ import com.gm.githubusercommits.dagger.modules.GitHubUserCommitsModule;
  */
 
 public class GitHubUserCommitsApplication extends Application {
-    private GitHubUserCommitsComponent component;
+    private   GitHubUserCommitsComponent component;
+
 
     @Override
     public void onCreate() {
@@ -22,7 +26,7 @@ public class GitHubUserCommitsApplication extends Application {
                 .build();
     }
 
-    public GitHubUserCommitsComponent getComponent() {
+    public   GitHubUserCommitsComponent getComponent() {
         return component;
     }
 }
