@@ -11,7 +11,9 @@ import retrofit2.http.GET;
  * Created by madhu on 5/12/19.
  */
 
+
 public interface GitHubUserCommitsApi {
+
     @GET("repos/chowdary60/GitHubUserCommits/commits")
     Call<List<GitHubCommit>> getUserCommits();
 }
