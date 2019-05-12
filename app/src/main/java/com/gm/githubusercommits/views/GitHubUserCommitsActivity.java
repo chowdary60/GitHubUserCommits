@@ -1,6 +1,7 @@
 package com.gm.githubusercommits.views;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.Group;
@@ -36,31 +37,16 @@ public class GitHubUserCommitsActivity extends AppCompatActivity implements GitH
     @Inject
     NetworkManager networkManager;
 
-    private ProgressBar progressBar;
-    private TextView loadingTextView;
-    private Group progressGroup;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_github_user_commits);
-        progressBar = findViewById(R.id.progress_bar);
-        loadingTextView = findViewById(R.id.loading_tv);
-        progressGroup = findViewById(R.id.progress_group);
+
         GitHubUserCommitsApplication gitHubUserCommitsApplication = (GitHubUserCommitsApplication) getApplication();
         gitHubUserCommitsApplication.getComponent().inject(this);
         new GitHubUserCommitsPresenter(this, gitHubUserCommitsRepository, networkManager).onStart();
-    }
-
-    @Override
-    public void showProgressDialog() {
-        loadingTextView.setText(getString(R.string.loading));
-        progressGroup.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void hideProgressDialog() {
-        progressGroup.setVisibility(View.GONE);
     }
 
     @Override
@@ -69,6 +55,7 @@ public class GitHubUserCommitsActivity extends AppCompatActivity implements GitH
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         GitHubUserCommitsAdapter gitHubUserCommitsAdapter = new GitHubUserCommitsAdapter(response);
         recyclerView.setAdapter(gitHubUserCommitsAdapter);
+
     }
 
     @Override
@@ -78,7 +65,6 @@ public class GitHubUserCommitsActivity extends AppCompatActivity implements GitH
 
     @Override
     public void connectionNotAvailable() {
-        loadingTextView.setText(getString(R.string.connection_not_avaiable));
-        progressBar.setVisibility(View.GONE);
+       Toast.makeText(this,"Network connection not available,please check it once",Toast.LENGTH_LONG).show();
     }
 }

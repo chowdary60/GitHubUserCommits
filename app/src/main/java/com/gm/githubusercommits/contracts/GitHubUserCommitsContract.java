@@ -10,9 +10,6 @@ import java.util.List;
 
 public interface GitHubUserCommitsContract {
     public interface View {
-        void showProgressDialog();
-
-        void hideProgressDialog();
 
         void processResponse(List<GitHubCommit> response);
 
