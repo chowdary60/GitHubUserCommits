@@ -7,7 +7,7 @@
     android:background="#ffffff"
     android:orientation="vertical"
     tools:context=".views.GitHubUserCommitsActivity">
-
+    <!--  layout file  which is responsible to show the UI-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_user_commits"
         android:layout_width="match_parent"
