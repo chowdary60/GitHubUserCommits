@@ -5,7 +5,9 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by madhu on 5/11/19.
  */
-
+/*
+Model class representing the JSON response
+ */
 public class Tree {
     @SerializedName("sha")
     private String sha;
